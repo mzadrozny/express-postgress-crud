@@ -1,0 +1,29 @@
+{
+  "name": "express-postgress-crud",
+  "version": "1.0.0",
+  "description": "for Deftcode devs family",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzadrozny/express-postgress-crud.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mzadrozny/express-postgress-crud/issues"
+  },
+  "homepage": "https://github.com/mzadrozny/express-postgress-crud#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "nodemon": "^2.0.1",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^7.14.0"
+  }
+}
