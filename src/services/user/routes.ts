@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 
-import { getUsers } from "./UserController";
+import { getUsers } from "./user-contoller";
 
 export default [
   {
