@@ -5,6 +5,7 @@ import { applyMiddleware, applyRoutes } from './utils';
 import middleware from './middleware';
 import errorHandlers from './middleware/errorHandlers';
 import { env } from './config';
+import { connection } from './connection/connection';
 
 process.on("uncaughtException", e => {
   console.log(e);
@@ -25,7 +26,8 @@ applyMiddleware(errorHandlers, app);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-
-app.listen(env.PORT, () => {
-  console.log('Server is working on port', env.PORT);
-});
+connection.then(() => {
+  app.listen(env.PORT, () => {
+    console.log('Server is working on port', env.PORT);
+  });
+})

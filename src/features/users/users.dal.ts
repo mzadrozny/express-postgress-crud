@@ -1,3 +1,6 @@
 import { pool } from "../../database";
+import { Users } from "./users.entity";
 
-export const getUsersData = pool.query('SELECT * FROM users ORDER BY id ASC');
+export const getUsersData = () => {
+  return Users.find();
+}

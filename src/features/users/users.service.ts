@@ -1,3 +1,5 @@
 import { getUsersData } from "./users.dal";
 
-export const getUsersResult = getUsersData;
+export const getUsersResult = () => {
+  return getUsersData();
+}
