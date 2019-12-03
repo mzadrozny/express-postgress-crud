@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { QueryResult } from "pg";
-import { getUsersResult } from "./user.service";
+import { getUsersResult } from "./users.service";
 
 export const getUsers = async (req: Request, res: Response) => {
   try {
