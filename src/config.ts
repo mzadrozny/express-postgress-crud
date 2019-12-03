@@ -1,8 +1,7 @@
-import envalid from 'envalid';
+import { str, num, cleanEnv } from 'envalid';
 
-const { str, num } = envalid;
 
-export const env = envalid.cleanEnv(process.env, {
+export const env = cleanEnv(process.env, {
   DB_HOST: str(),
   DB_USER: str(),
   DB_PASSWORD: str(),
