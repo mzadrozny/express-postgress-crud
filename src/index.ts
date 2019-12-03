@@ -1,4 +1,5 @@
 import express from 'express';
+import dotenv from 'dotenv';
 
 import routes from './features';
 import { applyMiddleware, applyRoutes } from './utils';
@@ -16,6 +17,8 @@ process.on("unhandledRejection", e => {
   console.log(e);
   process.exit(1);
 });
+
+dotenv.config();
 
 const app = express();
 
