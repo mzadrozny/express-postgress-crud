@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { pool } from "../../database";
 import { QueryResult } from "pg";
+import { getUsersResult } from "./user.service";
 
 export const getUsers = async (req: Request, res: Response) => {
   try {
     const response: QueryResult = await
-      pool.query('SELECT * FROM users ORDER BY id ASC');
+      getUsersResult;
     return res.status(200).json(response.rows);
   } catch (err) {
     console.log(err);
