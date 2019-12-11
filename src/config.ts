@@ -1,6 +1,5 @@
 import { str, num, cleanEnv } from 'envalid';
 
-
 export const env = cleanEnv(process.env, {
   DB_HOST: str(),
   DB_USER: str(),

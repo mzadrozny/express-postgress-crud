@@ -8,12 +8,12 @@ import errorHandlers from './middleware/errorHandlers';
 import { env } from './config';
 import { connection } from './connection/connection';
 
-process.on("uncaughtException", e => {
+process.on('uncaughtException', e => {
   console.log(e);
   process.exit(1);
 });
 
-process.on("unhandledRejection", e => {
+process.on('unhandledRejection', e => {
   console.log(e);
   process.exit(1);
 });
@@ -33,4 +33,4 @@ connection.then(() => {
   app.listen(env.PORT, () => {
     console.log('Server is working on port', env.PORT);
   });
-})
+});

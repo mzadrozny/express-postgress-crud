@@ -6,5 +6,5 @@ export const pool = new Pool({
   host: env.DB_HOST,
   password: env.DB_PASSWORD,
   database: env.DB_NAME,
-  port: env.DB_PORT
+  port: env.DB_PORT,
 });
